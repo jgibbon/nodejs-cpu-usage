@@ -2,7 +2,7 @@ var libfs = require( 'fs' );
 
 var readStat = function( cb ) {
 	libfs.readFile( "/proc/stat", function( err, data ) {
-		cb( data.toString( ) );
+		cb( data ? data.toString( ) :'' );
 	} );
 }
 
